@@ -32,7 +32,9 @@ To add **FaceLiveness 6.0.0** to your project using **Swift Package Manager**:
 1. Open your Xcode project.
 2. Navigate to **File > Add Packages**.
 3. In the search bar, paste the URL of this repository:
-`https://github.com/combateafraude/FaceLiveness.git`
+```console
+https://github.com/combateafraude/FaceLiveness.git
+```
 4. Select the version `6.0.0` or choose "Up to Next Major" option to ensure that your project will automatically get future compatible updates.
 
 5. Complete the steps, and Xcode will automatically integrate the **FaceLiveness** SDK into your project.
