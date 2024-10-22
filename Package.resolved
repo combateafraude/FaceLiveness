@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CafSolutions",
+        "repositoryURL": "https://github.com/combateafraude/CafSolutions.git",
+        "state": {
+          "branch": null,
+          "revision": "2dee43bae3daefa56c8c199e75c0ad5c5b48228c",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "FingerprintPro",
+        "repositoryURL": "https://github.com/fingerprintjs/fingerprintjs-pro-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "df75db119bc63f51e8b4d8c9e4edf0f38f346912",
+          "version": "2.6.0"
+        }
+      },
+      {
+        "package": "iProov",
+        "repositoryURL": "https://github.com/iProov/ios.git",
+        "state": {
+          "branch": null,
+          "revision": "8b9dea283aac942befbe1f19c354e460fe58cace",
+          "version": "12.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
