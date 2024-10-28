@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/iProov/ios.git",
-            .exact("12.0.0")
+            .exact("12.2.1")
         ),
         .package(
             url: "https://github.com/fingerprintjs/fingerprintjs-pro-ios.git",
@@ -29,8 +29,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "FaceLiveness",
-            url: "https://github.com/combateafraude/iOS/releases/download/FaceLiveness-6.0.0/FaceLiveness.xcframework.zip",
-            checksum: "29d5843ceaece83105de4a9847ce5fe3eeb7977cbaedfc8ff09019b1506bc7d5"
+            path: "FaceLiveness.xcframework"
         ),
         .target(
             name: "FaceLivenessSDK",
