@@ -15,6 +15,44 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import iProov
+public enum CAFStage : Swift.Int {
+  case dev
+  case beta
+  case prod
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CafSdkPlatform : Swift.String {
+  case nativeIos
+  case reactNativeIos
+  case flutterIos
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CafSDKFailure : Swift.Encodable {
+  public init(errorType: FaceLiveness.CafErrorType?, description: Swift.String?)
+  public let errorType: FaceLiveness.CafErrorType?
+  public let description: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum CafErrorType : Swift.String, Swift.Encodable {
+  case unsupportedDevice
+  case cameraPermission
+  case networkException
+  case serverException
+  case tokenException
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public enum CafResult<LivenessResult, SDKFailure> {
   case sucess(LivenessResult)
   case error(SDKFailure)
@@ -163,44 +201,15 @@ public protocol FaceLivenessDelegate : AnyObject {
   }
   @objc deinit
 }
-public enum CAFStage : Swift.Int {
-  case dev
-  case beta
-  case prod
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum CafSdkPlatform : Swift.String {
-  case nativeIos
-  case reactNativeIos
-  case flutterIos
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct CafSDKFailure : Swift.Encodable {
-  public init(errorType: FaceLiveness.CafErrorType?, description: Swift.String?)
-  public let errorType: FaceLiveness.CafErrorType?
-  public let description: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public enum CafErrorType : Swift.String, Swift.Encodable {
-  case unsupportedDevice
-  case cameraPermission
-  case networkException
-  case serverException
-  case tokenException
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
+extension FaceLiveness.CAFStage : Swift.Equatable {}
+extension FaceLiveness.CAFStage : Swift.Hashable {}
+extension FaceLiveness.CAFStage : Swift.RawRepresentable {}
+extension FaceLiveness.CafSdkPlatform : Swift.Equatable {}
+extension FaceLiveness.CafSdkPlatform : Swift.Hashable {}
+extension FaceLiveness.CafSdkPlatform : Swift.RawRepresentable {}
+extension FaceLiveness.CafErrorType : Swift.Equatable {}
+extension FaceLiveness.CafErrorType : Swift.Hashable {}
+extension FaceLiveness.CafErrorType : Swift.RawRepresentable {}
 extension FaceLiveness.ErrorType : Swift.Equatable {}
 extension FaceLiveness.ErrorType : Swift.Hashable {}
 extension FaceLiveness.ErrorType : Swift.RawRepresentable {}
@@ -224,12 +233,3 @@ extension FaceLiveness.Filter : Swift.RawRepresentable {}
 extension FaceLiveness.Time : Swift.Equatable {}
 extension FaceLiveness.Time : Swift.Hashable {}
 extension FaceLiveness.Time : Swift.RawRepresentable {}
-extension FaceLiveness.CAFStage : Swift.Equatable {}
-extension FaceLiveness.CAFStage : Swift.Hashable {}
-extension FaceLiveness.CAFStage : Swift.RawRepresentable {}
-extension FaceLiveness.CafSdkPlatform : Swift.Equatable {}
-extension FaceLiveness.CafSdkPlatform : Swift.Hashable {}
-extension FaceLiveness.CafSdkPlatform : Swift.RawRepresentable {}
-extension FaceLiveness.CafErrorType : Swift.Equatable {}
-extension FaceLiveness.CafErrorType : Swift.Hashable {}
-extension FaceLiveness.CafErrorType : Swift.RawRepresentable {}
