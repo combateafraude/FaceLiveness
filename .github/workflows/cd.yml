@@ -26,7 +26,7 @@ jobs:
       # Step 3: Download the zipped XCFramework from AWS CodeArtifact
       - name: Download XCFramework from CodeArtifact
         run: |
-          aws codeartifact download-package-from-repository \
+          aws codeartifact get-package-version-asset \
             --domain caf \
             --domain-owner 003367508252 \
             --repository development \
