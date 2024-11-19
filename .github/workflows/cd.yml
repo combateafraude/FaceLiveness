@@ -26,13 +26,6 @@ jobs:
       # Step 3: Download the zipped XCFramework from AWS CodeArtifact
       - name: Download XCFramework from CodeArtifact
         run: |
-          # Get an authorization token for CodeArtifact
-          # CODEARTIFACT_TOKEN=$(aws codeartifact get-authorization-token --domain caf --domain-owner 003367508252 --query authorizationToken --output text)
-
-          # Use the token to authenticate AWS CLI with CodeArtifact
-          # aws configure set aws_session_token $CODEARTIFACT_TOKEN
-
-          # Download the zipped XCFramework package from CodeArtifact
           aws codeartifact download-package-from-repository \
             --domain caf \
             --domain-owner 003367508252 \
