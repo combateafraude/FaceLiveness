@@ -1,0 +1,63 @@
+name: Download and Push XCFramework from AWS CodeArtifact
+
+on:
+  push:
+    branches:
+      - feat/cd  # Trigger on push to the main branch (adjust as needed)
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  download-xcframework:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository to make modifications
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up AWS CLI
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}  # Store AWS credentials in GitHub Secrets
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1  # Specify your AWS region
+
+      # Step 3: Download the zipped XCFramework from AWS CodeArtifact
+      - name: Download XCFramework from CodeArtifact
+        run: |
+          # Get an authorization token for CodeArtifact
+          CODEARTIFACT_TOKEN=$(aws codeartifact get-authorization-token --domain my-domain --domain-owner MY_AWS_ACCOUNT_ID --query authorizationToken --output text)
+
+          # Use the token to authenticate AWS CLI with CodeArtifact
+          aws configure set aws_session_token $CODEARTIFACT_TOKEN
+
+          # Download the zipped XCFramework package from CodeArtifact
+          aws codeartifact download-package-from-repository \
+            --domain my-domain \
+            --domain-owner MY_AWS_ACCOUNT_ID \
+            --repository my-repository \
+            --package my-package-name \
+            --package-version my-package-version \
+            --output . \
+            --format zip
+
+      # Step 4: Unzip the downloaded package
+      - name: Unzip the XCFramework
+        run: |
+          unzip my-package-name.zip -d ./path/to/extract/  # Specify where to unzip
+
+      # Step 5: Add, commit, and push the extracted XCFramework to the repository
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Add the extracted files to the git staging area
+          git add ./path/to/extract/*  # Add the extracted files
+
+          # Commit the changes
+          git commit -m "Add XCFramework package"
+
+          # Push changes to the repository
+          git push origin main  # Push to the main branch (adjust as needed)
