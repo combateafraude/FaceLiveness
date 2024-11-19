@@ -6,6 +6,10 @@ on:
       - cd  # Trigger on push to the main branch (adjust as needed)
   workflow_dispatch:  # Manual trigger
 
+permissions:
+    id-token: write   # This is required for requesting the JWT
+    contents: read  
+
 jobs:
   download-xcframework:
     runs-on: ubuntu-latest
