@@ -3,7 +3,7 @@ name: Download and Push XCFramework from AWS CodeArtifact
 on:
   push:
     branches:
-      - feat/cd  # Trigger on push to the main branch (adjust as needed)
+      - cd  # Trigger on push to the main branch (adjust as needed)
   workflow_dispatch:  # Manual trigger
 
 jobs:
