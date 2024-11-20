@@ -32,6 +32,7 @@ jobs:
             --repository development \
             --package ios-iproovprovider \
             --package-version 1.0.0 \
+            --asset ios-iproovprovider \
             --format zip
 
       # Step 4: Unzip the downloaded package
