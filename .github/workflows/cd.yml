@@ -35,11 +35,11 @@ jobs:
             --asset ios-iproovprovider \
             --format generic \
             --namespace swift \
-            Faceliveness
+            Faceliveness.zip
       - name: Check Content inside actual folder
         run: ls
-      - name: Enter Folder
-        run: cd Faceliveness
+      - name: Unzip Donwloaded Package
+        run: unzip Faceliveness.zip -d ./  # Specify where to unzip
       - name: Print content inside folder
         run: ls
       # Step 4: Unzip the downloaded package
