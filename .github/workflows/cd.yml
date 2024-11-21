@@ -33,7 +33,7 @@ jobs:
             --package ios-iproovprovider \
             --package-version 1.0.0 \
             --asset ios-iproovprovider \
-            --format generic
+            --format generic \
             Faceliveness
 
       # Step 4: Unzip the downloaded package
