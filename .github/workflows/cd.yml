@@ -36,11 +36,13 @@ jobs:
             --format generic \
             --namespace swift \
             Faceliveness
-
+      - name: Check Content inside actual folder
+        run: ls
       # Step 4: Unzip the downloaded package
-      - name: Unzip the XCFramework
-        run: |
-          unzip ios-iproovprovider.zip -d ./  # Specify where to unzip
+      # - name: Unzip the XCFramework
+      #   run: |
+      #     ls \
+      #     unzip ios-iproovprovider.zip -d ./  # Specify where to unzip
 
       # Step 5: Add, commit, and push the extracted XCFramework to the repository
       # - name: Commit and Push Changes
