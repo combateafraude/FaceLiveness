@@ -38,6 +38,10 @@ jobs:
             Faceliveness
       - name: Check Content inside actual folder
         run: ls
+      - name: Enter Folder
+        run: cd Faceliveness
+      - name: Print content inside folder
+        run: ls
       # Step 4: Unzip the downloaded package
       # - name: Unzip the XCFramework
       #   run: |
