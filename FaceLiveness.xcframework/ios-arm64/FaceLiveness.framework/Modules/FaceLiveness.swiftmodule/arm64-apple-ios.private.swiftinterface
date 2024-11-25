@@ -15,44 +15,6 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import iProov
-public enum CAFStage : Swift.Int {
-  case dev
-  case beta
-  case prod
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum CafSdkPlatform : Swift.String {
-  case nativeIos
-  case reactNativeIos
-  case flutterIos
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct CafSDKFailure : Swift.Encodable {
-  public init(errorType: FaceLiveness.CafErrorType?, description: Swift.String?)
-  public let errorType: FaceLiveness.CafErrorType?
-  public let description: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public enum CafErrorType : Swift.String, Swift.Encodable {
-  case unsupportedDevice
-  case cameraPermission
-  case networkException
-  case serverException
-  case tokenException
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
 public enum CafResult<LivenessResult, SDKFailure> {
   case sucess(LivenessResult)
   case error(SDKFailure)
@@ -93,6 +55,9 @@ public struct FaceLivenessErrorResult {
 public struct LivenessResult {
   public let signedResponse: Swift.String?
 }
+public protocol CafFaceLivenessProvidersProtocol {
+  func startLivenessCheck(parameters: [Swift.String : Any], livenessBaseUrl: Swift.String, certificates: [Swift.String], completion: @escaping ([Swift.String : Any]) -> Swift.Void)
+}
 @_hasMissingDesignatedInitializers public class FaceLivenessSDKViewModel {
   public func launchSDKHelper(completion: @escaping (FaceLiveness.CafResult<FaceLiveness.LivenessResult, FaceLiveness.SDKFailure>) -> Swift.Void)
   @objc deinit
@@ -117,8 +82,43 @@ public enum StatusControll : Swift.Int {
     get
   }
 }
-public protocol CafFaceLivenessProvidersProtocol {
-  func startLivenessCheck(parameters: [Swift.String : Any], completion: @escaping ([Swift.String : Any]) -> Swift.Void)
+public enum CAFStage : Swift.Int {
+  case dev
+  case beta
+  case prod
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CafSdkPlatform : Swift.String {
+  case nativeIos
+  case reactNativeIos
+  case flutterIos
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CafSDKFailure : Swift.Encodable {
+  public init(errorType: FaceLiveness.CafErrorType?, description: Swift.String?)
+  public let errorType: FaceLiveness.CafErrorType?
+  public let description: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum CafErrorType : Swift.String, Swift.Encodable {
+  case unsupportedDevice
+  case cameraPermission
+  case networkException
+  case serverException
+  case tokenException
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public enum ResourceType : Swift.String {
   case liveness
@@ -201,15 +201,6 @@ public protocol FaceLivenessDelegate : AnyObject {
   }
   @objc deinit
 }
-extension FaceLiveness.CAFStage : Swift.Equatable {}
-extension FaceLiveness.CAFStage : Swift.Hashable {}
-extension FaceLiveness.CAFStage : Swift.RawRepresentable {}
-extension FaceLiveness.CafSdkPlatform : Swift.Equatable {}
-extension FaceLiveness.CafSdkPlatform : Swift.Hashable {}
-extension FaceLiveness.CafSdkPlatform : Swift.RawRepresentable {}
-extension FaceLiveness.CafErrorType : Swift.Equatable {}
-extension FaceLiveness.CafErrorType : Swift.Hashable {}
-extension FaceLiveness.CafErrorType : Swift.RawRepresentable {}
 extension FaceLiveness.ErrorType : Swift.Equatable {}
 extension FaceLiveness.ErrorType : Swift.Hashable {}
 extension FaceLiveness.ErrorType : Swift.RawRepresentable {}
@@ -221,6 +212,15 @@ extension FaceLiveness.LivenessState : Swift.RawRepresentable {}
 extension FaceLiveness.StatusControll : Swift.Equatable {}
 extension FaceLiveness.StatusControll : Swift.Hashable {}
 extension FaceLiveness.StatusControll : Swift.RawRepresentable {}
+extension FaceLiveness.CAFStage : Swift.Equatable {}
+extension FaceLiveness.CAFStage : Swift.Hashable {}
+extension FaceLiveness.CAFStage : Swift.RawRepresentable {}
+extension FaceLiveness.CafSdkPlatform : Swift.Equatable {}
+extension FaceLiveness.CafSdkPlatform : Swift.Hashable {}
+extension FaceLiveness.CafSdkPlatform : Swift.RawRepresentable {}
+extension FaceLiveness.CafErrorType : Swift.Equatable {}
+extension FaceLiveness.CafErrorType : Swift.Hashable {}
+extension FaceLiveness.CafErrorType : Swift.RawRepresentable {}
 extension FaceLiveness.ResourceType : Swift.Equatable {}
 extension FaceLiveness.ResourceType : Swift.Hashable {}
 extension FaceLiveness.ResourceType : Swift.RawRepresentable {}
