@@ -1,0 +1,20 @@
+default_platform(:ios)
+
+def podspec
+  "../FaceLiveness.podspec"
+end
+
+
+platform :ios do
+
+    desc "Pod Lib Lint"
+    lane :pod_lint do
+        sh "pod lib lint #{podspec} --allow-warnings"
+    end
+
+    desc "Publish to Cocoapods"
+    lane :publish_to_cocoapods do
+        sh "pod trunk push #{podspec} --allow-warnings"
+    end
+
+end

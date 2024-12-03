@@ -29,7 +29,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "FaceLiveness",
-            path: "FaceLiveness.xcframework"
+            path: "Sources/FaceLiveness.xcframework"
         ),
         .target(
             name: "FaceLivenessSDK",
