@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/+PtNe9fPD1OwUsPkK4Dt/9Qqbo=
+		oZmRR7R2Wv2FEPj2i7tSpWfxatE=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		wPVE0q3nQk530DH1abXQs3EOH0o=
+		L9TP4p6XkbO+aUDLEIO4mJVgPZ0=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		VEiiesZCrX9mfILfI/URfMPwP2k=
+		41gcJwDsokgjKWZtNlVb1n/Mukk=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		wPVE0q3nQk530DH1abXQs3EOH0o=
+		L9TP4p6XkbO+aUDLEIO4mJVgPZ0=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		n+5yLZaKi97gY7CggRtTdsVPwLA=
+		oj5TwUNmUIx5AZSG3bnWAubjTPI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vMwwsCyg1khEnxJJ0GXAF4rMUnC1R7zLaoWWVcRIZ/U=
+			z0XS5+EimQ3bipXnOy74BYriGNYqEPmjEZo4fdzgHeA=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vd5+33plzi/r2oRLbmPXZEMYu1kyz9lhp5oFRAoArWE=
+			tS8Rz4v23G0u8c/GAK6Ripucd+e6kynwhxCJm2B2FVc=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vMwwsCyg1khEnxJJ0GXAF4rMUnC1R7zLaoWWVcRIZ/U=
+			z0XS5+EimQ3bipXnOy74BYriGNYqEPmjEZo4fdzgHeA=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			I5juGow4109JjcPqnvNxAjZUXv/DBOk4rwV4amXMIAU=
+			t+CP2bjf89szbUNQHnUHqhzZcGyD1xWCcGIHrW2bGAQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
