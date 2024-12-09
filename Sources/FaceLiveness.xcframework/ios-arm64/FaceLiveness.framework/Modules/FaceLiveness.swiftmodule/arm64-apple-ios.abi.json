@@ -7976,7 +7976,7 @@
       "kind": "StringLiteral",
       "offset": 1015,
       "length": 7,
-      "value": "\"6.3.0\""
+      "value": "\"6.3.1\""
     },
     {
       "filePath": "\/Users\/vinicius.minozzi\/CAF\/caf-ios\/OldSolutions\/FaceLiveness\/FaceLiveness\/Utils\/Constants.swift",
