@@ -3,18 +3,22 @@ name: Download and Push XCFramework from AWS CodeArtifact
 on:
   push:
     branches:
-      - cd  # Trigger on push to the main branch (adjust as needed)
-  workflow_dispatch:  # Manual trigger
+      - 'cd'
+    tags:
+      - '*'
 
 permissions:
     id-token: write   # This is required for requesting the JWT
-    contents: read  
+    contents: write
 
 jobs:
   download-xcframework:
     runs-on: ubuntu-latest
-
+  
     steps:
+      # Step 1: Checkout the repository to make modifications
+      - name: Checkout repository
+        uses: actions/checkout@v3
       # Step 2: Set up AWS CLI
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
@@ -30,35 +34,31 @@ jobs:
             --domain caf \
             --domain-owner 003367508252 \
             --repository development \
-            --package ios-iproovprovider \
+            --package ios-faceliveness \
             --package-version 1.0.0 \
-            --asset ios-iproovprovider \
+            --asset ios-faceliveness \
             --format generic \
             --namespace swift \
-            Faceliveness.zip
+            FaceLiveness.zip
       - name: Check Content inside actual folder
         run: ls
       - name: Unzip Donwloaded Package
-        run: unzip Faceliveness.zip -d ./  # Specify where to unzip
+        run: unzip -o FaceLiveness.zip -d ./  # Specify where to unzip
       - name: Print content inside folder
         run: ls
-      # Step 4: Unzip the downloaded package
-      # - name: Unzip the XCFramework
-      #   run: |
-      #     ls \
-      #     unzip ios-iproovprovider.zip -d ./  # Specify where to unzip
+        #Step  4: Push changes to git
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "combateafraude-bot"
+          git config --global user.email "administrator@combateafraude.com"
+          
+          # Add the extracted files to the git staging area
+          git add FaceLiveness.xcframework  # Add the extracted files
 
-      # Step 5: Add, commit, and push the extracted XCFramework to the repository
-      # - name: Commit and Push Changes
-      #   run: |
-      #     git config --global user.name "github-actions[bot]"
-      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # Commit the changes
+          git commit -m "Add XCFramework package"
 
-      #     # Add the extracted files to the git staging area
-      #     git add ./path/to/extract/*  # Add the extracted files
-
-      #     # Commit the changes
-      #     git commit -m "Add XCFramework package"
-
-      #     # Push changes to the repository
-      #     git push origin main  # Push to the main branch (adjust as needed)
+          # Push changes to the repository
+          git push origin cd  # Push to the main branch (adjust as needed)
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
