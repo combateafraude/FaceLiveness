@@ -15,6 +15,57 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import iProov
+public enum CafResult<LivenessResult, SDKError, SDKFailure> {
+  case sucess(LivenessResult)
+  case failure(SDKFailure)
+  case error(SDKError)
+  case canceled
+}
+public struct SDKError {
+  public let errorType: FaceLiveness.ErrorType?
+  public let description: Swift.String?
+}
+public struct SDKFailure {
+  public let failureType: Swift.String?
+  public let description: Swift.String?
+  public let signedResponse: Swift.String?
+}
+public struct CafFailureResult {
+  public let failureType: Swift.String?
+  public let description: Swift.String?
+}
+public enum ErrorType : Swift.String {
+  case unsupportedDevice
+  case cameraPermission
+  case networkException
+  case serverException
+  case tokenException
+  case certificateException
+  case captureAlreadyActiveException
+  case unexpectedErrorException
+  case userTimeoutException
+  case imageNotFoundException
+  case tooManyRequestsException
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct FaceLivenessResult {
+  public let signedResponse: Swift.String?
+}
+public struct FaceLivenessErrorResult {
+  public let errorType: FaceLiveness.ErrorType?
+  public let description: Swift.String?
+}
+public struct LivenessResult {
+  public let signedResponse: Swift.String?
+}
+@_hasMissingDesignatedInitializers public class FaceLivenessSDKViewModel {
+  public func launchSDKHelper(completion: @escaping (FaceLiveness.CafResult<FaceLiveness.LivenessResult, FaceLiveness.SDKError, FaceLiveness.SDKFailure>) -> Swift.Void)
+  @objc deinit
+}
 public enum CAFStage : Swift.Int {
   case dev
   case beta
@@ -24,6 +75,9 @@ public enum CAFStage : Swift.Int {
   public var rawValue: Swift.Int {
     get
   }
+}
+extension FaceLiveness.CAFStage {
+  public func toString() -> Swift.String
 }
 public enum CafSdkPlatform : Swift.String {
   case nativeIos
@@ -53,50 +107,6 @@ public enum CafErrorType : Swift.String, Swift.Encodable {
     get
   }
 }
-public enum CafResult<LivenessResult, SDKFailure> {
-  case sucess(LivenessResult)
-  case error(SDKFailure)
-  case canceled
-}
-public struct SDKFailure {
-  public let errorType: FaceLiveness.ErrorType?
-  public let description: Swift.String?
-}
-public enum ErrorType : Swift.String {
-  case unsupportedDevice
-  case cameraPermission
-  case networkException
-  case serverException
-  case tokenException
-  case certificateException
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum FailType {
-  case unknown
-  public static func == (a: FaceLiveness.FailType, b: FaceLiveness.FailType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public struct FaceLivenessResult {
-  public let signedResponse: Swift.String?
-}
-public struct FaceLivenessErrorResult {
-  public let errorType: FaceLiveness.ErrorType?
-  public let description: Swift.String?
-}
-public struct LivenessResult {
-  public let signedResponse: Swift.String?
-}
-@_hasMissingDesignatedInitializers public class FaceLivenessSDKViewModel {
-  public func launchSDKHelper(completion: @escaping (FaceLiveness.CafResult<FaceLiveness.LivenessResult, FaceLiveness.SDKFailure>) -> Swift.Void)
-  @objc deinit
-}
 public enum LivenessState : Swift.String {
   case connecting
   case connected
@@ -116,9 +126,6 @@ public enum StatusControll : Swift.Int {
   public var rawValue: Swift.Int {
     get
   }
-}
-public protocol CafFaceLivenessProvidersProtocol {
-  func startLivenessCheck(parameters: [Swift.String : Any], livenessBaseUrl: Swift.String, certificates: [Swift.String], completion: @escaping ([Swift.String : Any]) -> Swift.Void)
 }
 public enum ResourceType : Swift.String {
   case liveness
@@ -160,7 +167,8 @@ public enum Time : Swift.String {
 public protocol FaceLivenessDelegate : AnyObject {
   func didFinishLiveness(with livenessResult: FaceLiveness.LivenessResult)
   func didFinishWithCancelled()
-  func didFinishWithError(with sdkFailure: FaceLiveness.SDKFailure)
+  func didFinishWithFailure(with sdkFailure: FaceLiveness.SDKFailure)
+  func didFinishWithError(with sdkError: FaceLiveness.SDKError)
   func openLoadingScreenStartSDK()
   func closeLoadingScreenStartSDK()
   func openLoadingScreenValidation()
@@ -202,6 +210,9 @@ public protocol FaceLivenessDelegate : AnyObject {
   }
   @objc deinit
 }
+extension FaceLiveness.ErrorType : Swift.Equatable {}
+extension FaceLiveness.ErrorType : Swift.Hashable {}
+extension FaceLiveness.ErrorType : Swift.RawRepresentable {}
 extension FaceLiveness.CAFStage : Swift.Equatable {}
 extension FaceLiveness.CAFStage : Swift.Hashable {}
 extension FaceLiveness.CAFStage : Swift.RawRepresentable {}
@@ -211,11 +222,6 @@ extension FaceLiveness.CafSdkPlatform : Swift.RawRepresentable {}
 extension FaceLiveness.CafErrorType : Swift.Equatable {}
 extension FaceLiveness.CafErrorType : Swift.Hashable {}
 extension FaceLiveness.CafErrorType : Swift.RawRepresentable {}
-extension FaceLiveness.ErrorType : Swift.Equatable {}
-extension FaceLiveness.ErrorType : Swift.Hashable {}
-extension FaceLiveness.ErrorType : Swift.RawRepresentable {}
-extension FaceLiveness.FailType : Swift.Equatable {}
-extension FaceLiveness.FailType : Swift.Hashable {}
 extension FaceLiveness.LivenessState : Swift.Equatable {}
 extension FaceLiveness.LivenessState : Swift.Hashable {}
 extension FaceLiveness.LivenessState : Swift.RawRepresentable {}

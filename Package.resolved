@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/combateafraude/CafSolutions.git",
         "state": {
           "branch": null,
-          "revision": "c7b8b0bdb4fc0194e7a8d9e15461045a0454c5cd",
-          "version": "1.0.1"
+          "revision": "d563151e8281b86332e7a6860c81b22f25afae52",
+          "version": "1.0.2"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/iProov/ios.git",
         "state": {
           "branch": null,
-          "revision": "33db3b2559184651a780d76bba3add40f05d6c21",
-          "version": "12.2.1"
+          "revision": "f25b16d906e9ba3a1210be8ad8b503526d3bfa03",
+          "version": "12.2.2"
         }
       }
     ]
