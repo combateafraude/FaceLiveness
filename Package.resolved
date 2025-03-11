@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/fingerprintjs/fingerprintjs-pro-ios.git",
         "state": {
           "branch": null,
-          "revision": "df75db119bc63f51e8b4d8c9e4edf0f38f346912",
-          "version": "2.6.0"
+          "revision": "51df49f935af022ceafbee34855500a37e0f35d3",
+          "version": "2.7.0"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/iProov/ios.git",
         "state": {
           "branch": null,
-          "revision": "f25b16d906e9ba3a1210be8ad8b503526d3bfa03",
-          "version": "12.2.2"
+          "revision": "a4d6e8f67ab14a35f6f1f21daa6816baf905abac",
+          "version": "12.3.0"
         }
       }
     ]

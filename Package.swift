@@ -15,11 +15,11 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/iProov/ios.git",
-            .exact("12.2.2")
+            .exact("12.3.0")
         ),
         .package(
             url: "https://github.com/fingerprintjs/fingerprintjs-pro-ios.git",
-            .exact("2.6.0")
+            .exact("2.7.0")
         ),
         .package(
             url: "https://github.com/combateafraude/CafSolutions.git",

@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		7gCwMtJmrAZ623yVx8FEa159xVw=
+		pFXuZzV2ZOdzQYC2iMjt7kYdBIo=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Vf9P9Ts5fXnd/pf4arYerjGeTpY=
+		2J4damb3IqCSYnQqMXclYxdhut4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,7 +50,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C9PzEoEty+8+CjW/LQX8yKBXibD/tnCS7X5H2k1vX6c=
+			QLZ3lceCZyt7Z2b+O6PH/OZGH9l7rscfelyMqvZMp7I=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bo8zkpAaDaxmalHEueHMANWgUxGMWw01bnNGtiIV8mc=
+			O35Ijq4dx6TORnKy2wcFlO7j1W2J68l57IA9fFWfBb4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
