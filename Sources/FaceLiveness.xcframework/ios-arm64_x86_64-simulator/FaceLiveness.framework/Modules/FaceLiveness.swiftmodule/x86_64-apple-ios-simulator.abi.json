@@ -7211,7 +7211,14 @@
     {
       "filePath": "\/Users\/marcus.seixas\/Documents\/ios_project\/caf-ios2\/caf-ios\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/FaceLivenessSDKViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1065,
+      "offset": 909,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/marcus.seixas\/Documents\/ios_project\/caf-ios2\/caf-ios\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/FaceLivenessSDKViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1099,
       "length": 5,
       "value": "false"
     },
@@ -7955,7 +7962,7 @@
       "kind": "StringLiteral",
       "offset": 1066,
       "length": 7,
-      "value": "\"7.0.3\""
+      "value": "\"7.0.4\""
     },
     {
       "filePath": "\/Users\/marcus.seixas\/Documents\/ios_project\/caf-ios2\/caf-ios\/caf-sdks\/face-liveness\/FaceLiveness\/Utils\/Constants.swift",
@@ -8142,21 +8149,21 @@
     {
       "filePath": "\/Users\/marcus.seixas\/Documents\/ios_project\/caf-ios2\/caf-ios\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 5909,
+      "offset": 5993,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/marcus.seixas\/Documents\/ios_project\/caf-ios2\/caf-ios\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8470,
+      "offset": 8665,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/marcus.seixas\/Documents\/ios_project\/caf-ios2\/caf-ios\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8512,
+      "offset": 8707,
       "length": 2,
       "value": "\"\""
     },
