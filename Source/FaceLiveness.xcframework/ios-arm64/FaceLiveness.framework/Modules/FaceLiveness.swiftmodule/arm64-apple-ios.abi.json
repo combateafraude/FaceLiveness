@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "FaceLiveness",
+    "printedName": "FaceLiveness",
     "children": [
       {
         "kind": "Import",
@@ -456,6 +456,22 @@
         "sugared_genericSig": "<LivenessResult, SDKError, SDKFailure>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -590,6 +606,22 @@
         "moduleName": "FaceLiveness",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -784,6 +816,22 @@
         "moduleName": "FaceLiveness",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -918,6 +966,22 @@
         "moduleName": "FaceLiveness",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -1449,6 +1513,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1557,6 +1635,22 @@
         "moduleName": "FaceLiveness",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -1691,6 +1785,22 @@
         "moduleName": "FaceLiveness",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -1765,6 +1875,22 @@
         "moduleName": "FaceLiveness",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -1865,7 +1991,23 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -2106,6 +2248,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -2341,6 +2497,20 @@
         ],
         "enumRawTypeName": "String",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -2589,6 +2759,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Encodable",
@@ -2885,6 +3069,20 @@
         ],
         "enumRawTypeName": "String",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -3306,6 +3504,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -3540,6 +3752,20 @@
         ],
         "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -4027,6 +4253,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -4225,6 +4465,20 @@
         ],
         "enumRawTypeName": "String",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -4464,6 +4718,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -4662,6 +4930,20 @@
         ],
         "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -4899,6 +5181,20 @@
         ],
         "enumRawTypeName": "String",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -5165,6 +5461,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -6594,6 +6906,20 @@
               },
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -6685,6 +7011,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -7104,13 +7444,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/View\/LoadingScrean.swift",
-      "kind": "StringLiteral",
-      "offset": 146,
-      "length": 14,
-      "value": "\"FaceLiveness.LoadingHUDView\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-utils\/DebugMode.swift",
       "kind": "BooleanLiteral",
       "offset": 252,
@@ -7139,13 +7472,6 @@
       "value": "\"_errors\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Models\/LivenessResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 585,
-      "length": 9,
-      "value": "\"_errors\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/FaceLivenessSDKViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 909,
@@ -7158,34 +7484,6 @@
       "offset": 1099,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 335,
-      "length": 4,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 409,
-      "length": 4,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 335,
-      "length": 4,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 409,
-      "length": 4,
-      "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
@@ -7235,41 +7533,6 @@
       "offset": 412,
       "length": 48,
       "value": "\"Basic MnREWXgxbnV0a3ZlclJzNnQ3bW5BVjQybmNyOg==\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonApi.swift",
-      "kind": "StringLiteral",
-      "offset": 139,
-      "length": 5,
-      "value": "\"GET\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonApi.swift",
-      "kind": "StringLiteral",
-      "offset": 161,
-      "length": 6,
-      "value": "\"HEAD\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonApi.swift",
-      "kind": "StringLiteral",
-      "offset": 184,
-      "length": 6,
-      "value": "\"POST\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonApi.swift",
-      "kind": "StringLiteral",
-      "offset": 206,
-      "length": 5,
-      "value": "\"PUT\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonApi.swift",
-      "kind": "StringLiteral",
-      "offset": 229,
-      "length": 7,
-      "value": "\"PATCH\""
     },
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonApi.swift",
@@ -7454,34 +7717,6 @@
       "value": "\"_errors\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Models\/TokenResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 527,
-      "length": 9,
-      "value": "\"_errors\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Server\/APIRoute.swift",
-      "kind": "StringLiteral",
-      "offset": 161,
-      "length": 5,
-      "value": "\"GET\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Server\/APIRoute.swift",
-      "kind": "StringLiteral",
-      "offset": 183,
-      "length": 6,
-      "value": "\"HEAD\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Server\/APIRoute.swift",
-      "kind": "StringLiteral",
-      "offset": 206,
-      "length": 6,
-      "value": "\"POST\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Server\/APIRoute.swift",
       "kind": "StringLiteral",
       "offset": 161,
@@ -7557,55 +7792,6 @@
       "offset": 254,
       "length": 8,
       "value": "\"closed\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/Enum\/LivenessState.swift",
-      "kind": "StringLiteral",
-      "offset": 190,
-      "length": 12,
-      "value": "\"connecting\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/Enum\/LivenessState.swift",
-      "kind": "StringLiteral",
-      "offset": 224,
-      "length": 11,
-      "value": "\"connected\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/Enum\/LivenessState.swift",
-      "kind": "StringLiteral",
-      "offset": 254,
-      "length": 8,
-      "value": "\"closed\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/Enum\/LivenessState.swift",
-      "kind": "IntegerLiteral",
-      "offset": 326,
-      "length": 9,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/Enum\/LivenessState.swift",
-      "kind": "IntegerLiteral",
-      "offset": 345,
-      "length": 5,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/Enum\/LivenessState.swift",
-      "kind": "IntegerLiteral",
-      "offset": 326,
-      "length": 9,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/Enum\/LivenessState.swift",
-      "kind": "IntegerLiteral",
-      "offset": 345,
-      "length": 5,
-      "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/ViewModel\/Enum\/LivenessState.swift",
@@ -8205,58 +8391,9 @@
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 176,
-      "length": 4,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
-      "kind": "IntegerLiteral",
-      "offset": 182,
-      "length": 3,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
-      "kind": "IntegerLiteral",
       "offset": 1371,
       "length": 7,
       "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1371,
-      "length": 7,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1371,
-      "length": 7,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 1829,
-      "length": 17,
-      "value": "\"&getExpireIn=3H\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 1869,
-      "length": 18,
-      "value": "\"&getExpireIn=30D\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 1909,
-      "length": 2,
-      "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
@@ -8306,13 +8443,6 @@
       "offset": 9305,
       "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
-      "kind": "StringLiteral",
-      "offset": 2458,
-      "length": 15,
-      "value": "\"FaceLiveness.FaceLivenessSDK\""
     },
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-analytics\/CafContextCollector.swift",
