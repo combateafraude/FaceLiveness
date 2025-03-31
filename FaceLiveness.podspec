@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'iProov', '12.3.0'
   s.dependency 'FingerprintPro', '2.7.0'
-  s.dependency 'CafSolutions', '2.0.0'
+  s.dependency 'CafSolutions', '2.0.1'
 end
