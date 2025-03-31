@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FaceLiveness
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AdSupport
@@ -67,7 +67,7 @@ public struct LivenessResult {
   public func launchSDKHelper(completion: @escaping (FaceLiveness.CafResult<FaceLiveness.LivenessResult, FaceLiveness.SDKError, FaceLiveness.SDKFailure>) -> Swift.Void)
   @objc deinit
 }
-public enum CAFStage : Swift.Int {
+public enum CafEnvironment : Swift.Int {
   case dev
   case beta
   case prod
@@ -77,7 +77,7 @@ public enum CAFStage : Swift.Int {
     get
   }
 }
-extension FaceLiveness.CAFStage {
+extension FaceLiveness.CafEnvironment {
   public func toString() -> Swift.String
 }
 public enum CafSdkPlatform : Swift.String {
@@ -177,7 +177,7 @@ public protocol FaceLivenessDelegate : AnyObject {
   func onConnectionChanged(_ state: FaceLiveness.LivenessState)
 }
 @objc @_hasMissingDesignatedInitializers open class FaceLivenessSDK : ObjectiveC.NSObject {
-  public var stage: FaceLiveness.CAFStage
+  public var stage: FaceLiveness.CafEnvironment
   public var sdkVersion: Swift.String
   public var filter: FaceLiveness.Filter
   public var withLoading: Swift.Bool
@@ -199,7 +199,7 @@ public protocol FaceLivenessDelegate : AnyObject {
     public var imageUrlExpirationTime: FaceLiveness.Time
     @objc override dynamic public init()
     public func encode(to encoder: any Swift.Encoder) throws
-    open func setStage(stage: FaceLiveness.CAFStage) -> FaceLiveness.FaceLivenessSDK.Build
+    open func setStage(stage: FaceLiveness.CafEnvironment) -> FaceLiveness.FaceLivenessSDK.Build
     open func setFilter(filter: FaceLiveness.Filter) -> FaceLiveness.FaceLivenessSDK.Build
     open func setImageUrlExpirationTime(time: FaceLiveness.Time) -> FaceLiveness.FaceLivenessSDK.Build
     open func setLoadingScreen(withLoading: Swift.Bool) -> FaceLiveness.FaceLivenessSDK.Build
@@ -214,9 +214,9 @@ public protocol FaceLivenessDelegate : AnyObject {
 extension FaceLiveness.ErrorType : Swift.Equatable {}
 extension FaceLiveness.ErrorType : Swift.Hashable {}
 extension FaceLiveness.ErrorType : Swift.RawRepresentable {}
-extension FaceLiveness.CAFStage : Swift.Equatable {}
-extension FaceLiveness.CAFStage : Swift.Hashable {}
-extension FaceLiveness.CAFStage : Swift.RawRepresentable {}
+extension FaceLiveness.CafEnvironment : Swift.Equatable {}
+extension FaceLiveness.CafEnvironment : Swift.Hashable {}
+extension FaceLiveness.CafEnvironment : Swift.RawRepresentable {}
 extension FaceLiveness.CafSdkPlatform : Swift.Equatable {}
 extension FaceLiveness.CafSdkPlatform : Swift.Hashable {}
 extension FaceLiveness.CafSdkPlatform : Swift.RawRepresentable {}
