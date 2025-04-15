@@ -193,6 +193,7 @@ public protocol FaceLivenessDelegate : AnyObject {
     get
     set
   }
+  public var customLocalization: Swift.String?
   weak public var delegate: (any FaceLiveness.FaceLivenessDelegate)?
   open func startSDK(viewController: UIKit.UIViewController, mobileToken: Swift.String, personId: Swift.String, debugEnabled: Swift.Bool = false)
   @_inheritsConvenienceInitializers @objc open class Build : ObjectiveC.NSObject, Swift.Encodable {
@@ -206,6 +207,7 @@ public protocol FaceLivenessDelegate : AnyObject {
     open func setAuthenticationBaseUrl(authBaseUrl: Swift.String) -> FaceLiveness.FaceLivenessSDK.Build
     open func setFaceLivenessBaseUrl(livenessBaseUrl: Swift.String) -> FaceLiveness.FaceLivenessSDK.Build
     open func setCertificates(certificates: [Swift.String]) -> FaceLiveness.FaceLivenessSDK.Build
+    open func setCustomLocalization(named: Swift.String?) -> FaceLiveness.FaceLivenessSDK.Build
     open func build() -> FaceLiveness.FaceLivenessSDK
     @objc deinit
   }

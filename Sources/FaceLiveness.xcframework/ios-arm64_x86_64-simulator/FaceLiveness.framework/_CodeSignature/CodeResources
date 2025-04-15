@@ -14,11 +14,11 @@
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		OAMYDV5JcQ3CLIG3/N8uFRcUiWA=
+		Rt1jq0pNm70IIZ2K0u3my+irgQE=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		t2UK9iZ2z1mNYClUFRRzDu0zNEU=
+		pttSDbDtSLxxkWIu4HMNVbPmZSQ=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		t2UK9iZ2z1mNYClUFRRzDu0zNEU=
+		pttSDbDtSLxxkWIu4HMNVbPmZSQ=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0EKyOd03PWFSaeBWazquaSsULdU=
+		QVms49FtpRygf/fmEMz3SseFr10=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		OAMYDV5JcQ3CLIG3/N8uFRcUiWA=
+		Rt1jq0pNm70IIZ2K0u3my+irgQE=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Uc4b9buKN2uGo416rnlKUwLgpGk=
+		FYTWrIUgCgnosHNty9taLswDmDA=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,15 +46,19 @@
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Uc4b9buKN2uGo416rnlKUwLgpGk=
+		FYTWrIUgCgnosHNty9taLswDmDA=
 		</data>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YCCrplbEFD/GP3YusViHT+TILJE=
+		GSzb/XhXoXrgZjHmQc9UcsHkV9s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		2NBV+V2HBgO5tiZ+QWujfeg5u0o=
+		</data>
+		<key>Test.strings</key>
+		<data>
+		4rCib7tN24GzCj5RX3aFfL7OxXk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -70,14 +74,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hdWaae53IEUz0xQVIRnpjYMriH+pk83121FIltlGzdw=
+			IqaRq1+0+n45wHR60RHK5gi3/tbeyPxAPC4XHjWiukk=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			djCUi0q+szN6+msWwE3SkZOGyIaXMEsAri1HiwmcKXw=
+			FRPAHx+Q7jo4CTkwdkK2RN6H5YUUNs9GX1ypTKu//uU=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -91,28 +95,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			djCUi0q+szN6+msWwE3SkZOGyIaXMEsAri1HiwmcKXw=
+			FRPAHx+Q7jo4CTkwdkK2RN6H5YUUNs9GX1ypTKu//uU=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1zCJa/EENLvDVNLkYZfGxPm/iZZYSnOXn82URJa9LGI=
+			Dx3nb1l1K5qCIvR4XyQ7VZK+gvXB0yV7zvN8U0SXxN4=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hdWaae53IEUz0xQVIRnpjYMriH+pk83121FIltlGzdw=
+			IqaRq1+0+n45wHR60RHK5gi3/tbeyPxAPC4XHjWiukk=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XMbU42Vs5+jxLqW4Z8olF+21Zlata7Sc90XUG5bR4jk=
+			+Qk2PUny/ZDrvI/cumPHvlBkXTpGQWTLWSCAe1S6uTw=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -126,14 +130,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XMbU42Vs5+jxLqW4Z8olF+21Zlata7Sc90XUG5bR4jk=
+			+Qk2PUny/ZDrvI/cumPHvlBkXTpGQWTLWSCAe1S6uTw=
 			</data>
 		</dict>
 		<key>Modules/FaceLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JuY3CLOk4DU091ZQokYHQ6C1Nl0TZOMvnNz8rbGKOSA=
+			Entql4kgK+zlPPHl/1K196MImY655MGHpfV9dKIkPF0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -141,6 +145,13 @@
 			<key>hash2</key>
 			<data>
 			HZmd03xQ2Wbjdom8GZC8FZsCvaJxr9JGwb/PN66oFIg=
+			</data>
+		</dict>
+		<key>Test.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			50mPeRkRCLaVF4/FQM0qA/rUknQc35wGyCu6KRLLM5Y=
 			</data>
 		</dict>
 	</dict>
