@@ -2551,8 +2551,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "CafSDKFailure",
-        "printedName": "CafSDKFailure",
+        "name": "CafSDKError",
+        "printedName": "CafSDKError",
         "children": [
           {
             "kind": "Constructor",
@@ -2561,23 +2561,15 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "CafSDKFailure",
-                "printedName": "FaceLiveness.CafSDKFailure",
-                "usr": "s:12FaceLiveness13CafSDKFailureV"
+                "name": "CafSDKError",
+                "printedName": "FaceLiveness.CafSDKError",
+                "usr": "s:12FaceLiveness11CafSDKErrorV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "FaceLiveness.CafErrorType?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CafErrorType",
-                    "printedName": "FaceLiveness.CafErrorType",
-                    "usr": "s:12FaceLiveness12CafErrorTypeO"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "CafErrorType",
+                "printedName": "FaceLiveness.CafErrorType",
+                "usr": "s:12FaceLiveness12CafErrorTypeO"
               },
               {
                 "kind": "TypeNominal",
@@ -2595,8 +2587,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12FaceLiveness13CafSDKFailureV9errorType11descriptionAcA0c5ErrorF0OSg_SSSgtcfc",
-            "mangledName": "$s12FaceLiveness13CafSDKFailureV9errorType11descriptionAcA0c5ErrorF0OSg_SSSgtcfc",
+            "usr": "s:12FaceLiveness11CafSDKErrorV9errorType11descriptionAcA0c5ErrorF0O_SSSgtcfc",
+            "mangledName": "$s12FaceLiveness11CafSDKErrorV9errorType11descriptionAcA0c5ErrorF0O_SSSgtcfc",
             "moduleName": "FaceLiveness",
             "declAttributes": [
               "AccessControl",
@@ -2611,8 +2603,26 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "FaceLiveness.CafErrorType?",
+                "name": "CafErrorType",
+                "printedName": "FaceLiveness.CafErrorType",
+                "usr": "s:12FaceLiveness12CafErrorTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12FaceLiveness11CafSDKErrorV9errorTypeAA0c5ErrorF0Ovp",
+            "mangledName": "$s12FaceLiveness11CafSDKErrorV9errorTypeAA0c5ErrorF0Ovp",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -2621,12 +2631,38 @@
                     "usr": "s:12FaceLiveness12CafErrorTypeO"
                   }
                 ],
+                "declKind": "Accessor",
+                "usr": "s:12FaceLiveness11CafSDKErrorV9errorTypeAA0c5ErrorF0Ovg",
+                "mangledName": "$s12FaceLiveness11CafSDKErrorV9errorTypeAA0c5ErrorF0Ovg",
+                "moduleName": "FaceLiveness",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12FaceLiveness13CafSDKFailureV9errorTypeAA0c5ErrorF0OSgvp",
-            "mangledName": "$s12FaceLiveness13CafSDKFailureV9errorTypeAA0c5ErrorF0OSgvp",
+            "usr": "s:12FaceLiveness11CafSDKErrorV11descriptionSSSgvp",
+            "mangledName": "$s12FaceLiveness11CafSDKErrorV11descriptionSSSgvp",
             "moduleName": "FaceLiveness",
             "declAttributes": [
               "HasStorage",
@@ -2643,21 +2679,244 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "FaceLiveness.CafErrorType?",
+                    "printedName": "Swift.String?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "CafErrorType",
-                        "printedName": "FaceLiveness.CafErrorType",
-                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12FaceLiveness13CafSDKFailureV9errorTypeAA0c5ErrorF0OSgvg",
-                "mangledName": "$s12FaceLiveness13CafSDKFailureV9errorTypeAA0c5ErrorF0OSgvg",
+                "usr": "s:12FaceLiveness11CafSDKErrorV11descriptionSSSgvg",
+                "mangledName": "$s12FaceLiveness11CafSDKErrorV11descriptionSSSgvg",
+                "moduleName": "FaceLiveness",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12FaceLiveness11CafSDKErrorV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12FaceLiveness11CafSDKErrorV6encode2toys7Encoder_p_tKF",
+            "moduleName": "FaceLiveness",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12FaceLiveness11CafSDKErrorV",
+        "mangledName": "$s12FaceLiveness11CafSDKErrorV",
+        "moduleName": "FaceLiveness",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CafSDKFailure",
+        "printedName": "CafSDKFailure",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(signedResponse:failureReason:description:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CafSDKFailure",
+                "printedName": "FaceLiveness.CafSDKFailure",
+                "usr": "s:12FaceLiveness13CafSDKFailureV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CafFailureType",
+                "printedName": "FaceLiveness.CafFailureType",
+                "usr": "s:12FaceLiveness14CafFailureTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12FaceLiveness13CafSDKFailureV14signedResponse13failureReason11descriptionACSSSg_AA0C11FailureTypeOAGtcfc",
+            "mangledName": "$s12FaceLiveness13CafSDKFailureV14signedResponse13failureReason11descriptionACSSSg_AA0C11FailureTypeOAGtcfc",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "signedResponse",
+            "printedName": "signedResponse",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12FaceLiveness13CafSDKFailureV14signedResponseSSSgvp",
+            "mangledName": "$s12FaceLiveness13CafSDKFailureV14signedResponseSSSgvp",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12FaceLiveness13CafSDKFailureV14signedResponseSSSgvg",
+                "mangledName": "$s12FaceLiveness13CafSDKFailureV14signedResponseSSSgvg",
+                "moduleName": "FaceLiveness",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "failureReason",
+            "printedName": "failureReason",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CafFailureType",
+                "printedName": "FaceLiveness.CafFailureType",
+                "usr": "s:12FaceLiveness14CafFailureTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12FaceLiveness13CafSDKFailureV13failureReasonAA0C11FailureTypeOvp",
+            "mangledName": "$s12FaceLiveness13CafSDKFailureV13failureReasonAA0C11FailureTypeOvp",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12FaceLiveness13CafSDKFailureV13failureReasonAA0C11FailureTypeOvg",
+                "mangledName": "$s12FaceLiveness13CafSDKFailureV13failureReasonAA0C11FailureTypeOvg",
                 "moduleName": "FaceLiveness",
                 "implicit": true,
                 "accessorKind": "get"
@@ -2988,6 +3247,366 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "captureAlreadyActiveException",
+            "printedName": "captureAlreadyActiveException",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafErrorType.Type) -> FaceLiveness.CafErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafErrorType",
+                    "printedName": "FaceLiveness.CafErrorType",
+                    "usr": "s:12FaceLiveness12CafErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness12CafErrorTypeO29captureAlreadyActiveExceptionyA2CmF",
+            "mangledName": "$s12FaceLiveness12CafErrorTypeO29captureAlreadyActiveExceptionyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unexpectedErrorException",
+            "printedName": "unexpectedErrorException",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafErrorType.Type) -> FaceLiveness.CafErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafErrorType",
+                    "printedName": "FaceLiveness.CafErrorType",
+                    "usr": "s:12FaceLiveness12CafErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness12CafErrorTypeO010unexpectedD9ExceptionyA2CmF",
+            "mangledName": "$s12FaceLiveness12CafErrorTypeO010unexpectedD9ExceptionyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userTimeoutException",
+            "printedName": "userTimeoutException",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafErrorType.Type) -> FaceLiveness.CafErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafErrorType",
+                    "printedName": "FaceLiveness.CafErrorType",
+                    "usr": "s:12FaceLiveness12CafErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness12CafErrorTypeO20userTimeoutExceptionyA2CmF",
+            "mangledName": "$s12FaceLiveness12CafErrorTypeO20userTimeoutExceptionyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "imageNotFoundException",
+            "printedName": "imageNotFoundException",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafErrorType.Type) -> FaceLiveness.CafErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafErrorType",
+                    "printedName": "FaceLiveness.CafErrorType",
+                    "usr": "s:12FaceLiveness12CafErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness12CafErrorTypeO22imageNotFoundExceptionyA2CmF",
+            "mangledName": "$s12FaceLiveness12CafErrorTypeO22imageNotFoundExceptionyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tooManyRequestsException",
+            "printedName": "tooManyRequestsException",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafErrorType.Type) -> FaceLiveness.CafErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafErrorType",
+                    "printedName": "FaceLiveness.CafErrorType",
+                    "usr": "s:12FaceLiveness12CafErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness12CafErrorTypeO24tooManyRequestsExceptionyA2CmF",
+            "mangledName": "$s12FaceLiveness12CafErrorTypeO24tooManyRequestsExceptionyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unknownException",
+            "printedName": "unknownException",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafErrorType.Type) -> FaceLiveness.CafErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafErrorType",
+                    "printedName": "FaceLiveness.CafErrorType",
+                    "usr": "s:12FaceLiveness12CafErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness12CafErrorTypeO16unknownExceptionyA2CmF",
+            "mangledName": "$s12FaceLiveness12CafErrorTypeO16unknownExceptionyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "libraryException",
+            "printedName": "libraryException",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafErrorType.Type) -> FaceLiveness.CafErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafErrorType",
+                    "printedName": "FaceLiveness.CafErrorType",
+                    "usr": "s:12FaceLiveness12CafErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness12CafErrorTypeO16libraryExceptionyA2CmF",
+            "mangledName": "$s12FaceLiveness12CafErrorTypeO16libraryExceptionyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "permissionException",
+            "printedName": "permissionException",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafErrorType.Type) -> FaceLiveness.CafErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafErrorType",
+                    "printedName": "FaceLiveness.CafErrorType",
+                    "usr": "s:12FaceLiveness12CafErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness12CafErrorTypeO19permissionExceptionyA2CmF",
+            "mangledName": "$s12FaceLiveness12CafErrorTypeO19permissionExceptionyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidResponseException",
+            "printedName": "invalidResponseException",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafErrorType.Type) -> FaceLiveness.CafErrorType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafErrorType",
+                    "printedName": "FaceLiveness.CafErrorType",
+                    "usr": "s:12FaceLiveness12CafErrorTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafErrorType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness12CafErrorTypeO24invalidResponseExceptionyA2CmF",
+            "mangledName": "$s12FaceLiveness12CafErrorTypeO24invalidResponseExceptionyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -3054,6 +3673,66 @@
                 "usr": "s:12FaceLiveness12CafErrorTypeO8rawValueSSvg",
                 "mangledName": "$s12FaceLiveness12CafErrorTypeO8rawValueSSvg",
                 "moduleName": "FaceLiveness",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[FaceLiveness.CafErrorType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafErrorType",
+                    "printedName": "FaceLiveness.CafErrorType",
+                    "usr": "s:12FaceLiveness12CafErrorTypeO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12FaceLiveness12CafErrorTypeO8allCasesSayACGvpZ",
+            "mangledName": "$s12FaceLiveness12CafErrorTypeO8allCasesSayACGvpZ",
+            "moduleName": "FaceLiveness",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FaceLiveness.CafErrorType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12FaceLiveness12CafErrorTypeO8allCasesSayACGvgZ",
+                "mangledName": "$s12FaceLiveness12CafErrorTypeO8allCasesSayACGvgZ",
+                "moduleName": "FaceLiveness",
+                "static": true,
                 "implicit": true,
                 "accessorKind": "get"
               }
@@ -3125,6 +3804,712 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FaceLiveness.CafErrorType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafErrorType",
+                        "printedName": "FaceLiveness.CafErrorType",
+                        "usr": "s:12FaceLiveness12CafErrorTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CafFailureType",
+        "printedName": "CafFailureType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO7unknownyA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO7unknownyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tooMuchMovement",
+            "printedName": "tooMuchMovement",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO15tooMuchMovementyA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO15tooMuchMovementyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tooBright",
+            "printedName": "tooBright",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO9tooBrightyA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO9tooBrightyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tooDark",
+            "printedName": "tooDark",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO7tooDarkyA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO7tooDarkyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "misalignedFace",
+            "printedName": "misalignedFace",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO010misalignedA0yA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO010misalignedA0yA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "eyesClosed",
+            "printedName": "eyesClosed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO10eyesClosedyA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO10eyesClosedyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "faceTooFar",
+            "printedName": "faceTooFar",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO10faceTooFaryA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO10faceTooFaryA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "faceTooClose",
+            "printedName": "faceTooClose",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO12faceTooCloseyA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO12faceTooCloseyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sunglasses",
+            "printedName": "sunglasses",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO10sunglassesyA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO10sunglassesyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "obscuredFace",
+            "printedName": "obscuredFace",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO08obscuredA0yA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO08obscuredA0yA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "multipleFaces",
+            "printedName": "multipleFaces",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FaceLiveness.CafFailureType.Type) -> FaceLiveness.CafFailureType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FaceLiveness.CafFailureType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12FaceLiveness14CafFailureTypeO13multipleFacesyA2CmF",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO13multipleFacesyA2CmF",
+            "moduleName": "FaceLiveness",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "FaceLiveness.CafFailureType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12FaceLiveness14CafFailureTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "FaceLiveness",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12FaceLiveness14CafFailureTypeO8rawValueSSvp",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO8rawValueSSvp",
+            "moduleName": "FaceLiveness",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12FaceLiveness14CafFailureTypeO8rawValueSSvg",
+                "mangledName": "$s12FaceLiveness14CafFailureTypeO8rawValueSSvg",
+                "moduleName": "FaceLiveness",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[FaceLiveness.CafFailureType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CafFailureType",
+                    "printedName": "FaceLiveness.CafFailureType",
+                    "usr": "s:12FaceLiveness14CafFailureTypeO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12FaceLiveness14CafFailureTypeO8allCasesSayACGvpZ",
+            "mangledName": "$s12FaceLiveness14CafFailureTypeO8allCasesSayACGvpZ",
+            "moduleName": "FaceLiveness",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FaceLiveness.CafFailureType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12FaceLiveness14CafFailureTypeO8allCasesSayACGvgZ",
+                "mangledName": "$s12FaceLiveness14CafFailureTypeO8allCasesSayACGvgZ",
+                "moduleName": "FaceLiveness",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12FaceLiveness14CafFailureTypeO",
+        "mangledName": "$s12FaceLiveness14CafFailureTypeO",
+        "moduleName": "FaceLiveness",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[FaceLiveness.CafFailureType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CafFailureType",
+                        "printedName": "FaceLiveness.CafFailureType",
+                        "usr": "s:12FaceLiveness14CafFailureTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
           }
         ]
       },
@@ -5301,7 +6686,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC5stageAA14CafEnvironmentOvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC5stageAA14CafEnvironmentOvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -5386,7 +6775,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC10sdkVersionSSvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC10sdkVersionSSvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -5471,7 +6864,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC6filterAA6FilterOvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC6filterAA6FilterOvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -5556,7 +6953,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC11withLoadingSbvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC11withLoadingSbvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -5641,7 +7042,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC22imageUrlExpirationTimeAA0G0OvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC22imageUrlExpirationTimeAA0G0OvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -5726,7 +7131,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC11authBaseUrlSSvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC11authBaseUrlSSvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -5811,7 +7220,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC15livenessBaseUrlSSvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC15livenessBaseUrlSSvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -5920,7 +7333,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC12certificatesSaySSGvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC12certificatesSaySSGvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -6006,7 +7423,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC7sdkTypeAA03SdkE0OvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC7sdkTypeAA03SdkE0OvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -6092,7 +7513,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC12resourceTypeAA08ResourceE0OvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC12resourceTypeAA08ResourceE0OvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -6202,7 +7627,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC18customLocalizationSSSgvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC18customLocalizationSSSgvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -6305,7 +7734,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC8delegateAA0aB8Delegate_pSgvM",
                 "mangledName": "$s12FaceLiveness0aB3SDKC8delegateAA0aB8Delegate_pSgvM",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -6350,9 +7783,11 @@
             "usr": "s:12FaceLiveness0aB3SDKC05startC014viewController11mobileToken8personId12debugEnabledySo06UIViewF0C_S2SSbtF",
             "mangledName": "$s12FaceLiveness0aB3SDKC05startC014viewController11mobileToken8personId12debugEnabledySo06UIViewF0C_S2SSbtF",
             "moduleName": "FaceLiveness",
+            "deprecated": true,
             "isOpen": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -6441,7 +7876,11 @@
                     "usr": "s:12FaceLiveness0aB3SDKC5BuildC22imageUrlExpirationTimeAA0H0OvM",
                     "mangledName": "$s12FaceLiveness0aB3SDKC5BuildC22imageUrlExpirationTimeAA0H0OvM",
                     "moduleName": "FaceLiveness",
+                    "deprecated": true,
                     "implicit": true,
+                    "declAttributes": [
+                      "Available"
+                    ],
                     "accessorKind": "_modify"
                   }
                 ]
@@ -6758,9 +8197,11 @@
                 "usr": "s:12FaceLiveness0aB3SDKC5BuildC5buildACyF",
                 "mangledName": "$s12FaceLiveness0aB3SDKC5BuildC5buildACyF",
                 "moduleName": "FaceLiveness",
+                "deprecated": true,
                 "isOpen": true,
                 "declAttributes": [
-                  "AccessControl"
+                  "AccessControl",
+                  "Available"
                 ],
                 "funcSelfKind": "NonMutating"
               }
@@ -6769,10 +8210,12 @@
             "usr": "s:12FaceLiveness0aB3SDKC5BuildC",
             "mangledName": "$s12FaceLiveness0aB3SDKC5BuildC",
             "moduleName": "FaceLiveness",
+            "deprecated": true,
             "isOpen": true,
             "declAttributes": [
               "AccessControl",
-              "ObjC"
+              "ObjC",
+              "Available"
             ],
             "superclassUsr": "c:objc(cs)NSObject",
             "inheritsConvenienceInitializers": true,
@@ -6883,9 +8326,11 @@
         "usr": "c:@M@FaceLiveness@objc(cs)FaceLivenessSDK",
         "mangledName": "$s12FaceLiveness0aB3SDKC",
         "moduleName": "FaceLiveness",
+        "deprecated": true,
         "isOpen": true,
         "declAttributes": [
           "AccessControl",
+          "Available",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -7320,6 +8765,27 @@
       "value": "\"result\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-analytics\/CafAnalyticsConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1273,
+      "length": 12,
+      "value": "\"stackTrace\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-analytics\/CafAnalyticsConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1315,
+      "length": 13,
+      "value": "\"mobileToken\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-analytics\/CafAnalyticsConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1357,
+      "length": 12,
+      "value": "\"entrypoint\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-utils\/CafSDKTimer.swift",
       "kind": "Dictionary",
       "offset": 207,
@@ -7381,6 +8847,83 @@
       "offset": 409,
       "length": 4,
       "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 4568,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 4663,
+      "length": 19,
+      "value": "\"too_much_movement\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 4778,
+      "length": 12,
+      "value": "\"too_bright\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 4878,
+      "length": 10,
+      "value": "\"too_dark\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 4978,
+      "length": 17,
+      "value": "\"misaligned_face\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 5076,
+      "length": 13,
+      "value": "\"eyes_closed\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 5174,
+      "length": 14,
+      "value": "\"face_too_far\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 5283,
+      "length": 16,
+      "value": "\"face_too_close\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 5394,
+      "length": 12,
+      "value": "\"sunglasses\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 5493,
+      "length": 15,
+      "value": "\"obscured_face\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-models\/CafCommonModels.swift",
+      "kind": "StringLiteral",
+      "offset": 5585,
+      "length": 16,
+      "value": "\"multiple_faces\""
     },
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-analytics\/CafAnalyticsServer.swift",
@@ -7644,7 +9187,7 @@
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-analytics\/CafAnalytics.swift",
       "kind": "Dictionary",
-      "offset": 505,
+      "offset": 540,
       "length": 3,
       "value": "[]"
     },
@@ -7652,6 +9195,20 @@
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-analytics\/CafAnalytics.swift",
       "kind": "StringLiteral",
       "offset": 618,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-analytics\/CafAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 650,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-modules\/caf-commons\/caf-analytics\/CafAnalytics.swift",
+      "kind": "StringLiteral",
+      "offset": 718,
       "length": 14,
       "value": "\"install_guid\""
     },
@@ -8108,7 +9665,7 @@
       "kind": "StringLiteral",
       "offset": 1054,
       "length": 7,
-      "value": "\"7.2.0\""
+      "value": "\"7.3.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Utils\/Constants.swift",
@@ -8288,28 +9845,28 @@
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 3387,
+      "offset": 3883,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 6103,
+      "offset": 6599,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8797,
+      "offset": 9543,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/caf-mobile-pipelines\/caf-mobile-pipelines\/monorepo\/caf-sdks\/face-liveness\/FaceLiveness\/Input\/FaceLivenessSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8839,
+      "offset": 9585,
       "length": 2,
       "value": "\"\""
     },

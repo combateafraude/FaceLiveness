@@ -90,20 +90,62 @@ public enum CafSdkPlatform : Swift.String {
     get
   }
 }
-public struct CafSDKFailure : Swift.Encodable {
-  public init(errorType: FaceLiveness.CafErrorType?, description: Swift.String?)
-  public let errorType: FaceLiveness.CafErrorType?
+public struct CafSDKError : Swift.Encodable {
+  public init(errorType: FaceLiveness.CafErrorType, description: Swift.String?)
+  public let errorType: FaceLiveness.CafErrorType
   public let description: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
 }
-public enum CafErrorType : Swift.String, Swift.Encodable {
+public struct CafSDKFailure : Swift.Encodable {
+  public init(signedResponse: Swift.String?, failureReason: FaceLiveness.CafFailureType, description: Swift.String?)
+  public let signedResponse: Swift.String?
+  public let failureReason: FaceLiveness.CafFailureType
+  public let description: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum CafErrorType : Swift.String, Swift.Encodable, Swift.CaseIterable {
   case unsupportedDevice
   case cameraPermission
   case networkException
   case serverException
   case tokenException
+  case captureAlreadyActiveException
+  case unexpectedErrorException
+  case userTimeoutException
+  case imageNotFoundException
+  case tooManyRequestsException
+  case unknownException
+  case libraryException
+  case permissionException
+  case invalidResponseException
   public init?(rawValue: Swift.String)
+  public typealias AllCases = [FaceLiveness.CafErrorType]
   public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [FaceLiveness.CafErrorType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CafFailureType : Swift.String, Swift.Encodable, Swift.CaseIterable {
+  case unknown
+  case tooMuchMovement
+  case tooBright
+  case tooDark
+  case misalignedFace
+  case eyesClosed
+  case faceTooFar
+  case faceTooClose
+  case sunglasses
+  case obscuredFace
+  case multipleFaces
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [FaceLiveness.CafFailureType]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [FaceLiveness.CafFailureType] {
+    get
+  }
   public var rawValue: Swift.String {
     get
   }
@@ -176,7 +218,8 @@ public protocol FaceLivenessDelegate : AnyObject {
   func closeLoadingScreenValidation()
   func onConnectionChanged(_ state: FaceLiveness.LivenessState)
 }
-@objc @_hasMissingDesignatedInitializers open class FaceLivenessSDK : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
+open class FaceLivenessSDK : ObjectiveC.NSObject {
   public var stage: FaceLiveness.CafEnvironment
   public var sdkVersion: Swift.String
   public var filter: FaceLiveness.Filter
@@ -195,8 +238,10 @@ public protocol FaceLivenessDelegate : AnyObject {
   }
   public var customLocalization: Swift.String?
   weak public var delegate: (any FaceLiveness.FaceLivenessDelegate)?
+  @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
   open func startSDK(viewController: UIKit.UIViewController, mobileToken: Swift.String, personId: Swift.String, debugEnabled: Swift.Bool = false)
-  @_inheritsConvenienceInitializers @objc open class Build : ObjectiveC.NSObject, Swift.Encodable {
+  @_inheritsConvenienceInitializers @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
+  @objc open class Build : ObjectiveC.NSObject, Swift.Encodable {
     public var imageUrlExpirationTime: FaceLiveness.Time
     @objc override dynamic public init()
     public func encode(to encoder: any Swift.Encoder) throws
@@ -208,6 +253,7 @@ public protocol FaceLivenessDelegate : AnyObject {
     open func setFaceLivenessBaseUrl(livenessBaseUrl: Swift.String) -> FaceLiveness.FaceLivenessSDK.Build
     open func setCertificates(certificates: [Swift.String]) -> FaceLiveness.FaceLivenessSDK.Build
     open func setCustomLocalization(named: Swift.String?) -> FaceLiveness.FaceLivenessSDK.Build
+    @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
     open func build() -> FaceLiveness.FaceLivenessSDK
     @objc deinit
   }
@@ -225,6 +271,9 @@ extension FaceLiveness.CafSdkPlatform : Swift.RawRepresentable {}
 extension FaceLiveness.CafErrorType : Swift.Equatable {}
 extension FaceLiveness.CafErrorType : Swift.Hashable {}
 extension FaceLiveness.CafErrorType : Swift.RawRepresentable {}
+extension FaceLiveness.CafFailureType : Swift.Equatable {}
+extension FaceLiveness.CafFailureType : Swift.Hashable {}
+extension FaceLiveness.CafFailureType : Swift.RawRepresentable {}
 extension FaceLiveness.LivenessState : Swift.Equatable {}
 extension FaceLiveness.LivenessState : Swift.Hashable {}
 extension FaceLiveness.LivenessState : Swift.RawRepresentable {}
