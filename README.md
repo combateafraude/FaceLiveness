@@ -8,14 +8,14 @@
 
 | SDK            | Version |
 | -------------- |---------|
-| FaceLiveness   | 7.0.4   |
+| FaceLiveness   | 7.3.0   |
 
 #### Requirements
 
 | Deployment Info | Version       |
 | --------------- | ------------- |
 | iOS Target      | 13.0+         |
-| Xcode           | 15.4+         |
+| Xcode           | 16.2+         |
 | Swift           | 5.10+         |
 
 - A valid [CAF mobileToken](https://docs.caf.io/sdks/access-token).
@@ -27,7 +27,7 @@ Make sure to add an NSCameraUsageDescription entry to your app's Info.plist file
 
 ## Swift Package Manager (SPM) SDK Installation
 
-To add **FaceLiveness 7.0.4** to your project using **Swift Package Manager**:
+To add **FaceLiveness 7.3.0** to your project using **Swift Package Manager**:
 
 1. Open your Xcode project.
 2. Navigate to **File > Add Packages**.
@@ -35,7 +35,7 @@ To add **FaceLiveness 7.0.4** to your project using **Swift Package Manager**:
 ```console
 https://github.com/combateafraude/FaceLiveness.git
 ```
-4. Select the version `7.0.4` or choose "Up to Next Major" option to ensure that your project will automatically get future compatible updates.
+4. Select the version `7.3.0` or choose "Up to Next Major" option to ensure that your project will automatically get future compatible updates.
 
 5. Complete the steps, and Xcode will automatically integrate the **FaceLiveness** SDK into your project.
 
