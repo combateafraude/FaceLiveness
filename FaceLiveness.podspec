@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FaceLiveness'
-  s.version = '7.3.0'
+  s.version = '7.4.0'
   s.summary          = 'Face Liveness'
   s.homepage         = 'https://github.com/combateafraude/iOS'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -17,10 +17,10 @@ Pod::Spec.new do |s|
 
 
   s.swift_version = '5.3.2'
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '15.0'
   s.ios.vendored_frameworks = 'Sources/FaceLiveness.xcframework'
 
-  s.dependency 'iProov', '12.3.1'
+  s.dependency 'iProov', '13.1.0'
   s.dependency 'FingerprintPro', '2.7.0'
   s.dependency 'CafSolutions', '2.0.5'
 end
