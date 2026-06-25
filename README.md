@@ -8,7 +8,7 @@
 
 | SDK            | Version |
 | -------------- |---------|
-| FaceLiveness   | 7.4.0   |
+| FaceLiveness   | 7.5.0   |
 
 #### Requirements
 
