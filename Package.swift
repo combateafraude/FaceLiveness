@@ -19,7 +19,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/fingerprintjs/fingerprintjs-pro-ios.git",
-            .exact("2.7.0")
+            .exact("2.16.0")
         ),
         .package(
             url: "https://github.com/combateafraude/CafSolutions.git",
