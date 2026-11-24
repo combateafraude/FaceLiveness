@@ -1,4 +1,3 @@
 framework module FaceLiveness {
   header "FaceLiveness-Swift.h"
-  requires objc
 }

@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name FaceLiveness
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+// swift-compiler-version: Apple Swift version 6.4.2 effective-5.10 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -language-mode 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name FaceLiveness
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4.2
+import AVFoundation
 import AdSupport
 import CafSolutions
 import CommonCrypto
@@ -28,19 +29,19 @@ public enum CafResult<LivenessResult, SDKError, SDKFailure> {
   case canceled
 }
 public struct SDKError {
-  public let errorType: FaceLiveness.ErrorType?
-  public let description: Swift.String?
+  public let errorType: FaceLiveness::ErrorType?
+  public let description: Swift::String?
 }
 public struct SDKFailure {
-  public let failureType: Swift.String?
-  public let description: Swift.String?
-  public let signedResponse: Swift.String?
+  public let failureType: Swift::String?
+  public let description: Swift::String?
+  public let signedResponse: Swift::String?
 }
 public struct CafFailureResult {
-  public let failureType: Swift.String?
-  public let description: Swift.String?
+  public let failureType: Swift::String?
+  public let description: Swift::String?
 }
-public enum ErrorType : Swift.String {
+public enum ErrorType : Swift::String {
   case unsupportedDevice
   case cameraPermission
   case networkException
@@ -52,97 +53,106 @@ public enum ErrorType : Swift.String {
   case userTimeoutException
   case imageNotFoundException
   case tooManyRequestsException
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
 public struct FaceLivenessResult {
-  public let signedResponse: Swift.String?
+  public let signedResponse: Swift::String?
 }
 public struct FaceLivenessErrorResult {
-  public let errorType: FaceLiveness.ErrorType?
-  public let description: Swift.String?
+  public let errorType: FaceLiveness::ErrorType?
+  public let description: Swift::String?
 }
 public struct LivenessResult {
-  public let signedResponse: Swift.String?
+  public let signedResponse: Swift::String?
 }
 @_hasMissingDesignatedInitializers public class FaceLivenessSDKViewModel {
-  public func launchSDKHelper(completion: @escaping (FaceLiveness.CafResult<FaceLiveness.LivenessResult, FaceLiveness.SDKError, FaceLiveness.SDKFailure>) -> Swift.Void)
+  public func launchSDKHelper(completion: @escaping (FaceLiveness::CafResult<FaceLiveness::LivenessResult, FaceLiveness::SDKError, FaceLiveness::SDKFailure>) -> Swift::Void)
   @objc deinit
 }
-public enum LivenessState : Swift.String {
+public enum LivenessState : Swift::String {
   case connecting
   case connected
   case closed
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
-public enum StatusControll : Swift.Int {
+public enum StatusControll : Swift::Int {
   case sucess
   case cancelled
   case error
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Int)
-  #endif
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
-public enum CafEnvironment : Swift.Int {
+public protocol CafInstructionsAnalyticsDelegate : AnyObject {
+  func cameraPermissionRequested()
+  func cameraPermissionGranted()
+  func cameraPermissionDenied()
+}
+final public class CafConfirmationNextStepContent {
+  final public var title: Swift::String?
+  final public var description: Swift::String?
+  final public var buttonTitle: Swift::String?
+  final public var image: UIKit::UIImage?
+  public init(title: Swift::String? = nil, description: Swift::String? = nil, buttonTitle: Swift::String? = nil, image: UIKit::UIImage? = nil)
+  @objc deinit
+}
+public struct ColorConfiguration {
+  public let primaryColor: Swift::String?
+  public let secondaryColor: Swift::String?
+  public let contentColor: Swift::String?
+  public let backgroundColor: Swift::String?
+  public let mediumColor: Swift::String?
+  public let dialogBackgroundColor: Swift::String?
+  public let dialogBorderColor: Swift::String?
+  public init(primaryColor: Swift::String? = nil, secondaryColor: Swift::String? = nil, contentColor: Swift::String? = nil, backgroundColor: Swift::String? = nil, mediumColor: Swift::String? = nil, dialogBackgroundColor: Swift::String? = nil, dialogBorderColor: Swift::String? = nil)
+}
+public enum CafEnvironment : Swift::Int {
   case dev
   case beta
   case prod
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Int)
-  #endif
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
-extension FaceLiveness.CafEnvironment {
-  public func toString() -> Swift.String
+extension FaceLiveness::CafEnvironment {
+  public func toString() -> Swift::String
 }
-public enum CafSdkPlatform : Swift.String {
+public enum CafSdkPlatform : Swift::String {
   case nativeIos
   case reactNativeIos
   case flutterIos
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
-public struct CafSDKError : Swift.Encodable {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(errorType: FaceLiveness.CafErrorType, description: Swift.String?)
-  #endif
-  public let errorType: FaceLiveness.CafErrorType
-  public let description: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
+public struct CafSDKError : Swift::Encodable {
+  public init(errorType: FaceLiveness::CafErrorType, description: Swift::String?)
+  public let errorType: FaceLiveness::CafErrorType
+  public let description: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public struct CafSDKFailure : Swift.Encodable {
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(signedResponse: Swift.String?, failureReason: FaceLiveness.CafFailureType, description: Swift.String?)
-  #endif
-  public let signedResponse: Swift.String?
-  public let failureReason: FaceLiveness.CafFailureType
-  public let description: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
+public struct CafSDKFailure : Swift::Encodable {
+  public init(signedResponse: Swift::String?, failureReason: FaceLiveness::CafFailureType, description: Swift::String?)
+  public let signedResponse: Swift::String?
+  public let failureReason: FaceLiveness::CafFailureType
+  public let description: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
 }
-public enum CafErrorType : Swift.String, Swift.Encodable, Swift.CaseIterable {
+public enum CafErrorType : Swift::String, Swift::Encodable, Swift::CaseIterable {
   case unsupportedDevice
   case cameraPermission
   case networkException
@@ -162,19 +172,17 @@ public enum CafErrorType : Swift.String, Swift.Encodable, Swift.CaseIterable {
   case invalidOptionsException
   case securityException
   case faceAuthentication
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias AllCases = [FaceLiveness.CafErrorType]
-  public typealias RawValue = Swift.String
-  nonisolated public static var allCases: [FaceLiveness.CafErrorType] {
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [FaceLiveness::CafErrorType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [FaceLiveness::CafErrorType] {
     get
   }
-  public var rawValue: Swift.String {
+  public var rawValue: Swift::String {
     get
   }
 }
-public enum CafFailureType : Swift.String, Swift.Encodable, Swift.CaseIterable {
+public enum CafFailureType : Swift::String, Swift::Encodable, Swift::CaseIterable {
   case unknown
   case tooMuchMovement
   case tooBright
@@ -199,208 +207,165 @@ public enum CafFailureType : Swift.String, Swift.Encodable, Swift.CaseIterable {
   case timeout
   case userNotFound
   case processingFault
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias AllCases = [FaceLiveness.CafFailureType]
-  public typealias RawValue = Swift.String
-  nonisolated public static var allCases: [FaceLiveness.CafFailureType] {
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [FaceLiveness::CafFailureType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [FaceLiveness::CafFailureType] {
     get
   }
-  public var rawValue: Swift.String {
+  public var rawValue: Swift::String {
     get
   }
 }
-extension UIKit.UIColor {
-  convenience public init(byHex: Swift.String)
+public enum CafLogLevel : Swift::String {
+  case debug
+  case usage
+  case info
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
+    get
+  }
 }
-public enum ResourceType : Swift.String {
+public struct CafInstructionsConfiguration {
+  public var enabled: Swift::Bool
+  public var captureTitle: Swift::String?
+  public var captureDescriptionText: Swift::String?
+  public var captureSteps: [Swift::String]?
+  public var captureButtonTitle: Swift::String?
+  public var captureHeaderImage: UIKit::UIImage?
+  public var uploadTitle: Swift::String?
+  public var uploadDescriptionText: Swift::String?
+  public var uploadSteps: [Swift::String]?
+  public var uploadButtonTitle: Swift::String?
+  public var uploadHeaderImage: UIKit::UIImage?
+  public init(enabled: Swift::Bool = true, captureTitle: Swift::String? = nil, captureDescriptionText: Swift::String? = nil, captureSteps: [Swift::String]? = nil, captureButtonTitle: Swift::String? = nil, captureHeaderImage: UIKit::UIImage? = nil, uploadTitle: Swift::String? = nil, uploadDescriptionText: Swift::String? = nil, uploadSteps: [Swift::String]? = nil, uploadButtonTitle: Swift::String? = nil, uploadHeaderImage: UIKit::UIImage? = nil)
+}
+extension UIKit::UIColor {
+  convenience public init(byHex: Swift::String)
+}
+public enum ResourceType : Swift::String {
   case liveness
   case authentication
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
-public enum SdkType : Swift.String {
+public enum SdkType : Swift::String {
   case Native
   case ReactNative
   case Flutter
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
-public enum Filter : Swift.Int {
+public enum Filter : Swift::Int {
   case lineDrawing, natural
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Int)
-  #endif
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
     get
   }
 }
-public enum Time : Swift.String {
+public enum Time : Swift::String {
   case threeHours
   case thirtyDays
   case thirtyMin
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
     get
   }
 }
 public protocol FaceLivenessDelegate : AnyObject {
-  func didFinishLiveness(with livenessResult: FaceLiveness.LivenessResult)
+  func didFinishLiveness(with livenessResult: FaceLiveness::LivenessResult)
   func didFinishWithCancelled()
-  func didFinishWithFailure(with sdkFailure: FaceLiveness.SDKFailure)
-  func didFinishWithError(with sdkError: FaceLiveness.SDKError)
+  func didFinishWithFailure(with sdkFailure: FaceLiveness::SDKFailure)
+  func didFinishWithError(with sdkError: FaceLiveness::SDKError)
   func openLoadingScreenStartSDK()
   func closeLoadingScreenStartSDK()
   func openLoadingScreenValidation()
   func closeLoadingScreenValidation()
-  func onConnectionChanged(_ state: FaceLiveness.LivenessState)
+  func onConnectionChanged(_ state: FaceLiveness::LivenessState)
 }
 @objc @_hasMissingDesignatedInitializers @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
-open class FaceLivenessSDK : ObjectiveC.NSObject {
-  public var stage: FaceLiveness.CafEnvironment
-  public var sdkVersion: Swift.String
-  public var filter: FaceLiveness.Filter
-  public var withLoading: Swift.Bool
-  public var imageUrlExpirationTime: FaceLiveness.Time
-  public var authBaseUrl: Swift.String
-  public var livenessBaseUrl: Swift.String
-  public var certificates: [Swift.String]
-  public var sdkType: FaceLiveness.SdkType {
+open class FaceLivenessSDK : ObjectiveC::NSObject {
+  public var stage: FaceLiveness::CafEnvironment
+  public var sdkVersion: Swift::String
+  public var filter: FaceLiveness::Filter
+  public var withLoading: Swift::Bool
+  public var imageUrlExpirationTime: FaceLiveness::Time
+  public var authBaseUrl: Swift::String
+  public var livenessBaseUrl: Swift::String
+  public var certificates: [Swift::String]
+  public var sdkType: FaceLiveness::SdkType {
     get
     set
   }
-  public var resourceType: FaceLiveness.ResourceType {
+  public var resourceType: FaceLiveness::ResourceType {
     get
     set
   }
-  public var customLocalization: Swift.String?
-  weak public var delegate: (any FaceLiveness.FaceLivenessDelegate)?
+  public var customLocalization: Swift::String?
+  weak public var delegate: (any FaceLiveness::FaceLivenessDelegate)?
   @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
-  open func startSDK(viewController: UIKit.UIViewController, mobileToken: Swift.String, personId: Swift.String, debugEnabled: Swift.Bool = false)
+  open func startSDK(viewController: UIKit::UIViewController, mobileToken: Swift::String, personId: Swift::String, debugEnabled: Swift::Bool = false)
   @_inheritsConvenienceInitializers @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
-  @objc open class Build : ObjectiveC.NSObject, Swift.Encodable {
-    public var imageUrlExpirationTime: FaceLiveness.Time
+  @objc open class Build : ObjectiveC::NSObject, Swift::Encodable {
+    public var imageUrlExpirationTime: FaceLiveness::Time
     @objc override dynamic public init()
-    public func encode(to encoder: any Swift.Encoder) throws
-    open func setStage(stage: FaceLiveness.CafEnvironment) -> FaceLiveness.FaceLivenessSDK.Build
-    open func setFilter(filter: FaceLiveness.Filter) -> FaceLiveness.FaceLivenessSDK.Build
-    open func setImageUrlExpirationTime(time: FaceLiveness.Time) -> FaceLiveness.FaceLivenessSDK.Build
-    open func setLoadingScreen(withLoading: Swift.Bool) -> FaceLiveness.FaceLivenessSDK.Build
-    open func setAuthenticationBaseUrl(authBaseUrl: Swift.String) -> FaceLiveness.FaceLivenessSDK.Build
-    open func setFaceLivenessBaseUrl(livenessBaseUrl: Swift.String) -> FaceLiveness.FaceLivenessSDK.Build
-    open func setCertificates(certificates: [Swift.String]) -> FaceLiveness.FaceLivenessSDK.Build
-    #if compiler(>=5.3) && $NonescapableTypes
-    open func setCustomLocalization(named: Swift.String?) -> FaceLiveness.FaceLivenessSDK.Build
-    #endif
+    public func encode(to encoder: any Swift::Encoder) throws
+    open func setStage(stage: FaceLiveness::CafEnvironment) -> FaceLiveness::FaceLivenessSDK.FaceLiveness::Build
+    open func setFilter(filter: FaceLiveness::Filter) -> FaceLiveness::FaceLivenessSDK.FaceLiveness::Build
+    open func setImageUrlExpirationTime(time: FaceLiveness::Time) -> FaceLiveness::FaceLivenessSDK.FaceLiveness::Build
+    open func setLoadingScreen(withLoading: Swift::Bool) -> FaceLiveness::FaceLivenessSDK.FaceLiveness::Build
+    open func setAuthenticationBaseUrl(authBaseUrl: Swift::String) -> FaceLiveness::FaceLivenessSDK.FaceLiveness::Build
+    open func setFaceLivenessBaseUrl(livenessBaseUrl: Swift::String) -> FaceLiveness::FaceLivenessSDK.FaceLiveness::Build
+    open func setCertificates(certificates: [Swift::String]) -> FaceLiveness::FaceLivenessSDK.FaceLiveness::Build
+    open func setCustomLocalization(named: Swift::String?) -> FaceLiveness::FaceLivenessSDK.FaceLiveness::Build
     @available(*, deprecated, message: "This method of using the SDK is deprecated. Use CafSDK as the single entry point for all functionalities. Access the integration documentation at: https://docs.caf.io/caf-sdk/ios/getting-started-with-the-sdk")
-    open func build() -> FaceLiveness.FaceLivenessSDK
+    open func build() -> FaceLiveness::FaceLivenessSDK
     @objc deinit
   }
   @objc deinit
 }
-public struct ColorConfiguration {
-  public let primaryColor: Swift.String?
-  public let secondaryColor: Swift.String?
-  public let contentColor: Swift.String?
-  public let backgroundColor: Swift.String?
-  public let mediumColor: Swift.String?
-  public let dialogBackgroundColor: Swift.String?
-  public let dialogBorderColor: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(primaryColor: Swift.String? = nil, secondaryColor: Swift.String? = nil, contentColor: Swift.String? = nil, backgroundColor: Swift.String? = nil, mediumColor: Swift.String? = nil, dialogBackgroundColor: Swift.String? = nil, dialogBorderColor: Swift.String? = nil)
-  #endif
-}
-public protocol CafInstructionsAnalyticsDelegate : AnyObject {
-  func cameraPermissionRequested()
-  func cameraPermissionGranted()
-  func cameraPermissionDenied()
-}
-final public class CafConfirmationNextStepContent {
-  final public var title: Swift.String?
-  final public var description: Swift.String?
-  final public var buttonTitle: Swift.String?
-  final public var image: UIKit.UIImage?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(title: Swift.String? = nil, description: Swift.String? = nil, buttonTitle: Swift.String? = nil, image: UIKit.UIImage? = nil)
-  #endif
-  @objc deinit
-}
-public struct CafInstructionsConfiguration {
-  public var enabled: Swift.Bool
-  public var captureTitle: Swift.String?
-  public var captureDescriptionText: Swift.String?
-  public var captureSteps: [Swift.String]?
-  public var captureButtonTitle: Swift.String?
-  public var captureHeaderImage: UIKit.UIImage?
-  public var uploadTitle: Swift.String?
-  public var uploadDescriptionText: Swift.String?
-  public var uploadSteps: [Swift.String]?
-  public var uploadButtonTitle: Swift.String?
-  public var uploadHeaderImage: UIKit.UIImage?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(enabled: Swift.Bool = true, captureTitle: Swift.String? = nil, captureDescriptionText: Swift.String? = nil, captureSteps: [Swift.String]? = nil, captureButtonTitle: Swift.String? = nil, captureHeaderImage: UIKit.UIImage? = nil, uploadTitle: Swift.String? = nil, uploadDescriptionText: Swift.String? = nil, uploadSteps: [Swift.String]? = nil, uploadButtonTitle: Swift.String? = nil, uploadHeaderImage: UIKit.UIImage? = nil)
-  #endif
-}
-public enum CafLogLevel : Swift.String {
-  case debug
-  case usage
-  case info
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.String)
-  #endif
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-extension FaceLiveness.ErrorType : Swift.Equatable {}
-extension FaceLiveness.ErrorType : Swift.Hashable {}
-extension FaceLiveness.ErrorType : Swift.RawRepresentable {}
-extension FaceLiveness.LivenessState : Swift.Equatable {}
-extension FaceLiveness.LivenessState : Swift.Hashable {}
-extension FaceLiveness.LivenessState : Swift.RawRepresentable {}
-extension FaceLiveness.StatusControll : Swift.Equatable {}
-extension FaceLiveness.StatusControll : Swift.Hashable {}
-extension FaceLiveness.StatusControll : Swift.RawRepresentable {}
-extension FaceLiveness.CafEnvironment : Swift.Equatable {}
-extension FaceLiveness.CafEnvironment : Swift.Hashable {}
-extension FaceLiveness.CafEnvironment : Swift.RawRepresentable {}
-extension FaceLiveness.CafSdkPlatform : Swift.Equatable {}
-extension FaceLiveness.CafSdkPlatform : Swift.Hashable {}
-extension FaceLiveness.CafSdkPlatform : Swift.RawRepresentable {}
-extension FaceLiveness.CafErrorType : Swift.Equatable {}
-extension FaceLiveness.CafErrorType : Swift.Hashable {}
-extension FaceLiveness.CafErrorType : Swift.RawRepresentable {}
-extension FaceLiveness.CafFailureType : Swift.Equatable {}
-extension FaceLiveness.CafFailureType : Swift.Hashable {}
-extension FaceLiveness.CafFailureType : Swift.RawRepresentable {}
-extension FaceLiveness.ResourceType : Swift.Equatable {}
-extension FaceLiveness.ResourceType : Swift.Hashable {}
-extension FaceLiveness.ResourceType : Swift.RawRepresentable {}
-extension FaceLiveness.SdkType : Swift.Equatable {}
-extension FaceLiveness.SdkType : Swift.Hashable {}
-extension FaceLiveness.SdkType : Swift.RawRepresentable {}
-extension FaceLiveness.Filter : Swift.Equatable {}
-extension FaceLiveness.Filter : Swift.Hashable {}
-extension FaceLiveness.Filter : Swift.RawRepresentable {}
-extension FaceLiveness.Time : Swift.Equatable {}
-extension FaceLiveness.Time : Swift.Hashable {}
-extension FaceLiveness.Time : Swift.RawRepresentable {}
-extension FaceLiveness.CafLogLevel : Swift.Equatable {}
-extension FaceLiveness.CafLogLevel : Swift.Hashable {}
-extension FaceLiveness.CafLogLevel : Swift.RawRepresentable {}
+extension FaceLiveness::ErrorType : Swift::Equatable {}
+extension FaceLiveness::ErrorType : Swift::Hashable {}
+extension FaceLiveness::ErrorType : Swift::RawRepresentable {}
+extension FaceLiveness::LivenessState : Swift::Equatable {}
+extension FaceLiveness::LivenessState : Swift::Hashable {}
+extension FaceLiveness::LivenessState : Swift::RawRepresentable {}
+extension FaceLiveness::StatusControll : Swift::Equatable {}
+extension FaceLiveness::StatusControll : Swift::Hashable {}
+extension FaceLiveness::StatusControll : Swift::RawRepresentable {}
+extension FaceLiveness::CafEnvironment : Swift::Equatable {}
+extension FaceLiveness::CafEnvironment : Swift::Hashable {}
+extension FaceLiveness::CafEnvironment : Swift::RawRepresentable {}
+extension FaceLiveness::CafSdkPlatform : Swift::Equatable {}
+extension FaceLiveness::CafSdkPlatform : Swift::Hashable {}
+extension FaceLiveness::CafSdkPlatform : Swift::RawRepresentable {}
+extension FaceLiveness::CafErrorType : Swift::Equatable {}
+extension FaceLiveness::CafErrorType : Swift::Hashable {}
+extension FaceLiveness::CafErrorType : Swift::RawRepresentable {}
+extension FaceLiveness::CafFailureType : Swift::Equatable {}
+extension FaceLiveness::CafFailureType : Swift::Hashable {}
+extension FaceLiveness::CafFailureType : Swift::RawRepresentable {}
+extension FaceLiveness::CafLogLevel : Swift::Equatable {}
+extension FaceLiveness::CafLogLevel : Swift::Hashable {}
+extension FaceLiveness::CafLogLevel : Swift::RawRepresentable {}
+extension FaceLiveness::ResourceType : Swift::Equatable {}
+extension FaceLiveness::ResourceType : Swift::Hashable {}
+extension FaceLiveness::ResourceType : Swift::RawRepresentable {}
+extension FaceLiveness::SdkType : Swift::Equatable {}
+extension FaceLiveness::SdkType : Swift::Hashable {}
+extension FaceLiveness::SdkType : Swift::RawRepresentable {}
+extension FaceLiveness::Filter : Swift::Equatable {}
+extension FaceLiveness::Filter : Swift::Hashable {}
+extension FaceLiveness::Filter : Swift::RawRepresentable {}
+extension FaceLiveness::Time : Swift::Equatable {}
+extension FaceLiveness::Time : Swift::Hashable {}
+extension FaceLiveness::Time : Swift::RawRepresentable {}
